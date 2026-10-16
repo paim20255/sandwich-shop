@@ -20,20 +20,16 @@ public class SandWich {
         } else {
             System.out.println("Invalid size.");
 
-            }
+        }
         System.out.println("Enter your age: ");
         int age = input.nextInt();
 
         if (age <= 17) {
-            price = price * 0.90f;
+            price = price * 0.90f;  // 10% off
+        } else if (age >= 65) {
+            price = price * 0.80;   // 20% off
         }
-        }
 
-
-
-
-
-
-
+        System.out.printf("Your sandwich costs: $%.2f%n", price);
     }
-
+}
