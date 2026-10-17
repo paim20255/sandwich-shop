@@ -10,7 +10,12 @@ public class SandWich {
         System.out.println("1: Regular ($5.45)");
         System.out.println("2: Large($8.95)");
         System.out.println("Enter 1 or 2: ");
-        int size = input.nextInt();
+        int size = Integer.parseInt(input.nextLine());
+
+        // New changes
+        System.out.println("Would you like it loaded? (yes/no): ");
+        String loadedInput = input.nextLine();
+        boolean isLoaded = loadedInput.equalsIgnoreCase("yes");
 
         double price = 0;
         if (size == 1) {
@@ -19,6 +24,7 @@ public class SandWich {
             price = 8.95;
         } else {
             System.out.println("Invalid size.");
+            return;
 
         }
         System.out.println("Enter your age: ");
