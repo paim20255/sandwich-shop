@@ -30,7 +30,7 @@ public class SandWich {
             String loaded = input.next();
 
 
-            if (loaded.equalsIgnoreCase("yes")); {
+            if (loaded.equalsIgnoreCase("yes")) {
                 price = price + loadedCost;
 
 
