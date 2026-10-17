@@ -10,21 +10,31 @@ public class SandWich {
         System.out.println("1: Regular ($5.45)");
         System.out.println("2: Large($8.95)");
         System.out.println("Enter 1 or 2: ");
-        int size = Integer.parseInt(input.nextLine());
+        int size = input.nextInt();
 
-        // New changes
-        System.out.println("Would you like it loaded? (yes/no): ");
-        String loadedInput = input.nextLine();
-        boolean isLoaded = loadedInput.equalsIgnoreCase("yes");
 
         double price = 0;
+        double loadedCost = 0;
         if (size == 1) {
             price = 5.45;
+            loadedCost = 1.00;
         } else if (size == 2) {
             price = 8.95;
+            loadedCost = 1.75;
         } else {
             System.out.println("Invalid size.");
             return;
+        }
+            // New changes
+            System.out.println("Would you like it loaded? (yes/no): ");
+            String loaded = input.next();
+
+
+            if (loaded.equalsIgnoreCase("yes")); {
+                price = price + loadedCost;
+
+
+
 
         }
         System.out.println("Enter your age: ");
